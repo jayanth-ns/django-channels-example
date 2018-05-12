@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <form action="{% url 'example:login' %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div>
+        {{ field.label_tag }}
+        {{ field }}
+      </div>
+    {% endfor %}
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="{% url 'example:signup' %}">Sign Up!</a></p>
+{% endblock %}

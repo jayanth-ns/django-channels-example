@@ -1,0 +1,6 @@
+
+#.gitignore
+.idea/
+db.sqlite3
+*/migrations
+
